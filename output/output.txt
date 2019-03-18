@@ -1,0 +1,18 @@
+   Strip=CSA1   Point=2000   GlobalX=1044.75   GlobalY=469.32   WALeft=115.35   WARight=115.35   Autowiden=No
+   Strip=CSA1   Point=2001   GlobalX=746.25   GlobalY=469.32   WBLeft=115.35   WBRight=115.35
+   Strip=CSA2   Point=2002   GlobalX=149.25   GlobalY=191.4   WALeft=47.85   WARight=47.85   Autowiden=No
+   Strip=CSA2   Point=2003   GlobalX=0.0   GlobalY=191.4   WBLeft=47.85   WBRight=47.85
+   Strip=CSA3   Point=2004   GlobalX=1119.5   GlobalY=787.8   WALeft=74.5   WARight=74.5   Autowiden=No
+   Strip=CSA3   Point=2005   GlobalX=1119.5   GlobalY=334.8   WBLeft=74.5   WBRight=74.5
+   Strip=CSA4   Point=2006   GlobalX=1194.0   GlobalY=900.3   WALeft=22.5   WARight=22.5   Autowiden=No
+   Strip=CSA4   Point=2007   GlobalX=0.0   GlobalY=900.3   WBLeft=22.5   WBRight=22.5
+   Strip=CSA5   Point=2008   GlobalX=373.0008   GlobalY=385.62   WALeft=50.67   WARight=50.67   Autowiden=No
+   Strip=CSA5   Point=2009   GlobalX=0.0   GlobalY=385.62   WBLeft=50.67   WBRight=50.67
+   Strip=CSA6   Point=2010   GlobalX=1194.0   GlobalY=0.0   WALeft=47.85   WARight=47.85   Autowiden=No
+   Strip=CSA6   Point=2011   GlobalX=0.0   GlobalY=0.0   WBLeft=47.85   WBRight=47.85
+   Strip=CSA7   Point=2012   GlobalX=746.25   GlobalY=469.32   WALeft=115.35   WARight=115.35   Autowiden=No
+   Strip=CSA7   Point=2013   GlobalX=373.25   GlobalY=469.32   WBLeft=115.35   WBRight=115.35
+   Strip=CSA8   Point=2014   GlobalX=1194.0   GlobalY=191.4   WALeft=47.85   WARight=47.85   Autowiden=No
+   Strip=CSA8   Point=2015   GlobalX=1044.75   GlobalY=191.4   WBLeft=47.85   WBRight=47.85
+   Strip=CSA9   Point=2016   GlobalX=373.0008   GlobalY=747.045   WALeft=40.755   WARight=40.755   Autowiden=No
+   Strip=CSA9   Point=2017   GlobalX=0.0   GlobalY=747.045   WBLeft=40.755   WBRight=40.755
