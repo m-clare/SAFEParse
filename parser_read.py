@@ -17,6 +17,11 @@ def parse_info(line, data_type=None):
 
 
 def create_slab_data(filepath):
+	heading_data = {'OBJECT GEOMETRY - POINT COORDINATES': 'Point', 
+				 	'OBJECT GEOMETRY - LINES 01 - GENERAL': 'Line',
+				 	'OBJECT GEOMETRY - AREAS 01 - GENERAL': 'Area',
+				 	'OBJECT GEOMETRY - DESIGN STRIPS': 'Strip'}
+	data_dict = {}
 	with open(filepath) as fp:
 		line = fp.readline()
 		cnt = 1
@@ -27,39 +32,18 @@ def create_slab_data(filepath):
 				if heading:
 					heading = heading[0]
 					data_dict[heading] = {}
-
-					if heading == 'OBJECT GEOMETRY - POINT COORDINATES':
+					if heading in heading_data:
 						line = fp.readline()
 						while len(line.strip()) > 0:
-							point_id, attr_dict = parse_info(line, data_type='Point')
-							data_dict[heading][point_id] = attr_dict
+							obj_id, attr_dict = parse_info(line, data_type=heading_data[heading])
+							data_dict[heading][obj_id] = attr_dict
 							line = fp.readline() # go to next line
-					if heading == 'OBJECT GEOMETRY - LINES 01 - GENERAL':
-						line = fp.readline()
-						while len(line.strip()) > 0:
-							line_id, attr_dict = parse_info(line, data_type='Line')
-							data_dict[heading][line_id] = attr_dict
-							line = fp.readline() # go to next line
-					if heading == 'OBJECT GEOMETRY - AREAS 01 - GENERAL':
-						line = fp.readline()
-						while len(line.strip()) > 0:
-							area_id, attr_dict = parse_info(line, data_type='Area')
-							data_dict[heading][area_id] = attr_dict
-							line = fp.readline() # go to next line
-					if heading == 'OBJECT GEOMETRY - DESIGN STRIPS':
-						# Design strip info is a polyline with "width"
-						line = fp.readline()
-						while len(line.strip()) > 0:
-							# detect strip polyline points
-							strip_id, attr_dict = parse_info(line, data_type='Strip')
-							if not strip_id in data_dict[heading]:
-								data_dict[heading][strip_id] = []
-							data_dict[heading][strip_id].append(attr_dict)
-							line = fp.readline()
 			line = fp.readline()
+	with open('output.json', 'w') as outfile:
+		json.dump(data_dict, outfile)
 
 if __name__ == '__main__':
 	
-	with open('data.json', 'w') as outfile:
-		json.dump(data_dict, outfile)
+	fp = './input/14_in_slab.f2k'
+	create_slab_data(fp)
 
