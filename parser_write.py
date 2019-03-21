@@ -20,9 +20,4 @@ for i in range(len(data.keys())):
 	file.write(ostring1 + '\n')
 
 file.close()
-# for i in range(len(data.keys())):
-# 	print(data[)
-	# file.write(data['Strip CSA' + str(i + 1)]['Strip'])
-
-# file.close()
 
